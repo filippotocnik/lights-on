@@ -1,0 +1,36 @@
+[debug] [2022-06-15T06:05:16.804Z] ----------------------------------------------------------------------
+[debug] [2022-06-15T06:05:16.805Z] Command:       /Users/filippotocnik/.nvm/versions/node/v14.18.0/bin/node /Users/filippotocnik/.nvm/versions/node/v14.18.0/bin/firebase deploy
+[debug] [2022-06-15T06:05:16.805Z] CLI Version:   11.0.1
+[debug] [2022-06-15T06:05:16.805Z] Platform:      darwin
+[debug] [2022-06-15T06:05:16.805Z] Node Version:  v14.18.0
+[debug] [2022-06-15T06:05:16.806Z] Time:          Wed Jun 15 2022 08:05:16 GMT+0200 (Central European Summer Time)
+[debug] [2022-06-15T06:05:16.806Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-15T06:05:16.832Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-15T06:05:16.832Z] > authorizing via signed-in user (filip.potocnik@gmail.com)
+[debug] [2022-06-15T06:05:16.832Z] [iam] checking project lights-on-18c0d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-15T06:05:16.833Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lights-on-18c0d:testIamPermissions [none]
+[debug] [2022-06-15T06:05:16.833Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lights-on-18c0d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-15T06:05:17.753Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lights-on-18c0d:testIamPermissions 200
+[debug] [2022-06-15T06:05:17.754Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lights-on-18c0d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-15T06:05:17.755Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lights-on-18c0d [none]
+[debug] [2022-06-15T06:05:18.112Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lights-on-18c0d 200
+[debug] [2022-06-15T06:05:18.113Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lights-on-18c0d {"projectId":"lights-on-18c0d","projectNumber":"96479764057","displayName":"lights-on","name":"projects/lights-on-18c0d","resources":{"hostingSite":"lights-on-18c0d"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'lights-on-18c0d'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-15T06:05:18.118Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lights-on-18c0d [none]
+[debug] [2022-06-15T06:05:18.400Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lights-on-18c0d 200
+[debug] [2022-06-15T06:05:18.400Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lights-on-18c0d {"projectId":"lights-on-18c0d","projectNumber":"96479764057","displayName":"lights-on","name":"projects/lights-on-18c0d","resources":{"hostingSite":"lights-on-18c0d"},"state":"ACTIVE"}
+[debug] [2022-06-15T06:05:18.404Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/96479764057/sites/lights-on-18c0d/versions [none]
+[debug] [2022-06-15T06:05:18.405Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/96479764057/sites/lights-on-18c0d/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-15T06:05:19.952Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/96479764057/sites/lights-on-18c0d/versions 200
+[debug] [2022-06-15T06:05:19.952Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/96479764057/sites/lights-on-18c0d/versions {"name":"projects/96479764057/sites/lights-on-18c0d/versions/ecac4f40721a7bb0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[lights-on-18c0d]: beginning deploy... 
+[info] i  hosting[lights-on-18c0d]: found 15 files in dist 
+[debug] [2022-06-15T06:05:19.965Z] [hosting] uploading with 200 concurrency
+[debug] [2022-06-15T06:05:20.050Z] [hosting] hash cache [ZGlzdA] stored for 15 files
+[debug] [2022-06-15T06:05:20.050Z] [hosting][hash queue][FINAL] {"max":80,"min":7,"avg":18.6,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":83}
+[debug] [2022-06-15T06:05:20.050Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/96479764057/sites/lights-on-18c0d/versions/ecac4f40721a7bb0:populateFiles [none]
+[debug] [2022-06-15T06:05:20.050Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/96479764057/sites/lights-on-18c0d/versions/ecac4f40721a7bb0:populateFiles {"files":{"/404.html":"05cbc6f94d7a69ce2e29646eab13be2c884e61ba93e3094df5028866876d18b3","/index.html":"af74058fd660973664d98758f9a56402af388cefa2363b6ca5c10fb50735f8aa","/assets/index.a94e3182.css":"f54de4965a5bf4777e488747320c78952e0eb9c792b75c4133cb9e123af9c392","/favicon-vue.ico":"1e71457865f706dc865b49a54a86e193818220d290b30226b6630a42faf1535d","/img/logos/acb.png":"82dbc51b7aab00d8698e4947bfe1d8603dfc661111f081bda6e5e2995e36610c","/img/logos/intra-lighting.png":"ff8eb3c9255ee6b41c018d9e83ecd427af215e41195bdc2e4951775494a3f1b9","/img/logos/nemo-lighting.png":"d1edfa8745c520fb6e27ce8d2f5a4cbce458831b16a0cc58ea30a64d1153c2e8","/img/logos/olev.png":"e03b710dfd5c59198758c3ccf024d3e793b3bad160f80e1bd81eb8e6410edc27","/img/logos/zero-lighting.png":"56327e3958ce58a097be73c4da2a713ae52199e0823daf9893fdfe09103348ee","/img/logos/luceplan.png":"1414d0cec7418e636ea26017d5d61ee1225061053278b0052d36497dcc8a48dc","/img/logos/vertigo-bird.jpg":"c43644002d6fdc46dde595fafad72d02c0b628be98b255d55c356e730e2552f6","/assets/index.cfd6a6d6.js":"a3e1ebf69970d9d5458b5307add18c9f412e382100a09a2177de445827a41c9f","/favicon.ico":"329c64513fc846cfeaf43b98bade1e5117d59422d86d60b3b126eed080b206db","/img/logos/rotaliana.jpg":"dafc5a295b9415e8167e3dbc37f53bbf825da61095829749acfb308f57b7a88c","/img/lightson-logo.jpg":"ab5fb9cdb0ffca745414a77d0d51fd3891668a4ac809bb73ec45aeb787050efd"}}
